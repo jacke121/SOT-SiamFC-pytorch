@@ -30,3 +30,18 @@ for i, seq in enumerate(seq_lists):
 
 with open(output_path, 'wb') as fw:
     pickle.dump(data, fw, -1)
+
+
+with open(output_path, 'rb') as fr:
+    train_data = pickle.load(fr)
+
+n_pairs = len(train_data)
+
+dataset = [None]*n_pairs
+for k, (seqname, seq) in enumerate(train_data.iteritems()):
+    img_list = seq['images']
+    gt = seq['gt']
+    img_dir = os.path.join(seq_root, seqname)
+    dataset[k] = Exemplar(img_dir, img_list, gt, opts)
+
+    

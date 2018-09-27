@@ -4,6 +4,7 @@ import numpy as np
 import cv2
 import torch
 import torch.utils.data as data
+from PIL import Image
 
 class Exemplar(data.Dataset):
     def __init__(self, img_dir, img_list, gt, opts):
