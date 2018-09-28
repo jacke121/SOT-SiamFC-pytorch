@@ -22,4 +22,4 @@ def set_optimizer(model, lr_base, lr_mult = opts['lr_mult'], momentum = opts['mo
 
 def train():
 
-    model = SiamFC
+    model = SiamFC()
