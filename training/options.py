@@ -1,6 +1,10 @@
 from collections import OrderedDict
 
 opts = OrderedDict()
+opts['use_gpu'] = True
+
+opts['init_model_path'] = '../models/...mat'
+opts['save_model_path'] = '../models/...pth'
 
 opts['lr'] = 0.0001
 opts['w_decay'] = 0.0005
