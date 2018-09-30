@@ -27,7 +27,7 @@ def forward_samples(model, image, samples, out_layer='conv3'):
             feats = torch.cat((feats, feat.data.clone()), 0)
     return feats
 
-def set_optimizer(model, lr_base, lr_mult = opts['lr_mult'], momentum = opts['momentum'], w_decay = ops['w_decay']):
+def set_optimizer(model, lr_base, lr_mult = opts['lr_mult'], momentum = opts['momentum'], w_decay = opts['w_decay']):
     params = model.get_learnable_params()
     param_list = []
     for k, p in params.iteritems():

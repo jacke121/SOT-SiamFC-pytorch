@@ -191,12 +191,12 @@ if __name__=='__main__':
     transforms_train = transforms.Compose([transforms.RandomHorizontalFlip(),transforms.ToTensor()])
     pair_train=Pair(root_dir='???',subset='train',transform=transforms_train,config=config)
     print(pair_train.__len__())
-    pair_train.__getitem__(20)?
+    pair_train.__getitem__(20)
 
     transforms_val = transforms.ToTensor()
     pair_val=Pair(root_dir='???',subset='val',transform=transforms_val,config=config)
     print(pair_val.__len__())
-    pair_val.__getitem__(20)?
+    pair_val.__getitem__(20)
 
     
 

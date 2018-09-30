@@ -11,6 +11,7 @@ from torch.autograd import Variable
 from dataset.options import *
 from dataset.exemplar import *
 from dataset.prepro import *
+from model import SiamFC, BinaryLoss, Precision
 from options import *
 
 def set_optimizer(model, lr_base, lr_mult=opts['lr_mult'], momentum=opts['momentum'], w_decay=opts['w_decay']):

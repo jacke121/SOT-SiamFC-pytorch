@@ -139,7 +139,7 @@ class Accuracy():
         pos_correct = (pos_score[:,1] > pos_score[:,0]).sum().float()
         neg_correct = (neg_score[:,1] < neg_score[:,0]).sum().float()
 
-        pos_acc = pos_correct / (pos_score.size(0) + 1e-8)?
+        pos_acc = pos_correct / (pos_score.size(0) + 1e-8)
         neg_acc = neg_correct / (neg_score.size(0) + 1e-8)
 
         return pos_acc.data[0], neg_acc.data[0]
